@@ -11,7 +11,9 @@ const verifica = function() {
     // prendo il value in input
     let parolaValue = parolaInput.value;
     // applico controllo palindromo
-    if(palindrome(parolaValue)){
+    if(!isNaN(parolaValue)){
+        alert('Inserisci una parola!');
+    } else if(palindrome(parolaValue)){
     document.querySelector('p').innerHTML = 'la tua parola &egrave; palindroma';
     } else {
     document.querySelector('p').innerHTML = 'la tua parola NON &egrave; palindroma';
