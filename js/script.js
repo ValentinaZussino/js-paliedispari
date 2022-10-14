@@ -9,19 +9,21 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let word = '2porop2';
-console.log(palindrome(word));
 
+// ES PALIDROMA
+// dichiaro variabili per input e btn
 const parolaInput = document.getElementById('parola');
-const btnVerifica = document.getElementById('btn-verifica')
-
+const btnVerifica = document.getElementById('btn-verifica');
+// preparo funzione per btn
 const verifica = function() {
+    // prendo il value in input
     let parolaValue = parolaInput.value;
+    // applico controllo palindromo
     if(palindrome(parolaValue)){
-    document.querySelector('p').innerHTML = 'la tua parola &egrave; palindroma'
+    document.querySelector('p').innerHTML = 'la tua parola &egrave; palindroma';
     } else {
-    document.querySelector('p').innerHTML = 'la tua parola NON &egrave; palindroma'
+    document.querySelector('p').innerHTML = 'la tua parola NON &egrave; palindroma';
     }
 }
-
-btnVerifica.addEventListener('click', verifica)
+// on click
+btnVerifica.addEventListener('click', verifica);
