@@ -1,8 +1,9 @@
+// ES PALIDROMA
 // Palidroma
 // Chiedere all’utente di inserire una parola
 // Creare una funzione per capire se la parola inserita è palindroma
 
-// ES PALIDROMA
+
 // dichiaro variabili per input e btn
 const parolaInput = document.getElementById('parola');
 const btnVerifica = document.getElementById('btn-verifica');
@@ -21,6 +22,9 @@ const verifica = function() {
 // on click
 btnVerifica.addEventListener('click', verifica);
 
+
+
+// ES GIOCO PARI E DISPARI
 // Pari e Dispari
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -28,27 +32,30 @@ btnVerifica.addEventListener('click', verifica);
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// ES GIOCO PARI E DISPARI
-// faccio scegliere all'utente se pari o dispari 
-const sceltaUtInput = document.getElementById('scelta-utente');
+
 // creo valori obbligatori
 const pari = 'pari';
 const dispari = 'dispari';
-// faccio scegliere all'utente numero
+//prendo input di scelta utente
+const sceltaUtInput = document.getElementById('scelta-utente');
+//prendo input di numero utente
 const numeroUtInput = document.getElementById('numero-utente');
 // prendo btn gioca
 const btnGioca = document.getElementById('btn-gioca');
-
 // on click
 btnGioca.addEventListener('click', function(){
-    // inizio a impedire di mettere parole diverse e numeri > di 5
+    // inizio a impedire di mettere parole diverse e numeri > di 5 e < 1
     let sceltaUtValue = sceltaUtInput.value;
+    sceltaUtInput.value = '';
     if(sceltaUtValue != pari && sceltaUtValue != dispari){
-        alert('puoi scrivere solo o pari o dispari');
+        alert('puoi scrivere solo o pari o dispari');   
+        return;
     }
     let numeroUtValue = parseInt(numeroUtInput.value);
-    if((numeroUtValue < 0 || numeroUtValue > 5)){
-    alert('metti un numero da 1 a 5');
+    numeroUtInput.value = '';
+    if((numeroUtValue < 1 || numeroUtValue > 5)){
+        alert('metti un numero da 1 a 5');
+        return;
     }
     // genero num random del pc
     let numPc = randomNumber(1, 5);
@@ -57,8 +64,6 @@ btnGioca.addEventListener('click', function(){
     let somma = numPc + numeroUtValue;
     console.log(somma);
     // verifica se pari o disp con iseven e confronto con valore inserito
-    // let verifica = isEven(somma);
-    // console.log(verifica);
     if(isEven(somma) && sceltaUtValue == pari){
         console.log('ha vinto l\'utente');
     } else if(!isEven(somma) && sceltaUtValue == dispari){
@@ -66,4 +71,6 @@ btnGioca.addEventListener('click', function(){
     } else {
         console.log('ha vinto il pc');
     }
+    sceltaUtInput.value = '';
+    numeroUtInput.value = '';
 }) 
