@@ -6,8 +6,8 @@
 // dichiaro variabili per input e btn
 const parolaInput = document.getElementById('parola');
 const btnVerifica = document.getElementById('btn-verifica');
-// preparo funzione per btn
-const verifica = function() {
+// on click
+btnVerifica.addEventListener('click', function(){
     // prendo il value in input
     let parolaValue = parolaInput.value;
     // applico controllo palindromo
@@ -19,9 +19,7 @@ const verifica = function() {
     document.querySelector('p').innerHTML = 'la tua parola NON &egrave; palindroma';
     }
     parolaInput.value = '';
-}
-// on click
-btnVerifica.addEventListener('click', verifica);
+});
 
 
 
