@@ -56,6 +56,7 @@ btnGioca.addEventListener('click', function(){
         return;
     }
     document.getElementById('txt-num-ut').innerHTML = 'Il numero da te giocato &egrave; ' + numeroUtValue;
+    document.getElementById('txt-scelta').innerHTML = 'La tua scelta &egrave; stata: ' + sceltaUtValue;
     // genero num random del pc
     let numPc = randomNumber(1, 5);
     document.getElementById('txt-num-pc').innerHTML = 'Il numero giocato dal pc &egrave; ' + numPc;
