@@ -9,5 +9,19 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let word = 'oro';
+let word = '2porop2';
 console.log(palindrome(word));
+
+const parolaInput = document.getElementById('parola');
+const btnVerifica = document.getElementById('btn-verifica')
+
+const verifica = function() {
+    let parolaValue = parolaInput.value;
+    if(palindrome(parolaValue)){
+    document.querySelector('p').innerHTML = 'la tua parola &egrave; palindroma'
+    } else {
+    document.querySelector('p').innerHTML = 'la tua parola NON &egrave; palindroma'
+    }
+}
+
+btnVerifica.addEventListener('click', verifica)
