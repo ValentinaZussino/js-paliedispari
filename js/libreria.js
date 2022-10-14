@@ -2,7 +2,6 @@
 function randomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
 // PARI DISPARI
 function isEven(num){
     if(num % 2 === 0){
@@ -13,7 +12,19 @@ function isEven(num){
 }
 // PALINDROMO
 function palindrome(str) {
-    var lowStr = str.toLowerCase();
-    var reverseStr = lowStr.split('').reverse().join(''); 
+    let lowStr = str.toLowerCase();
+    let reverseStr = lowStr.split('').reverse().join(''); 
     return reverseStr === lowStr;
+}
+// FUNZIONI CLELIA ALERT
+function notificationError(msgError){
+    const alerta = document.createElement('div');
+    alerta.className='alert alert-danger';
+    alerta.innerHTML = msgError;
+    return alerta;
+}
+function removeFirstNotification(){
+    const alertToRemove = document.querySelector('.alert');
+    console.log(alertToRemove);
+   if(alertToRemove) alertToRemove.remove();
 }
