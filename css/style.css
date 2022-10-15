@@ -1,4 +1,53 @@
+:root {
+    --pesca: rgb(242, 141, 82);
+    --darkpesca:rgb(151, 81, 42);
+    --azzurro: rgb(135, 207, 229);
+    --ghiaccio: rgb(254, 255, 253);
+    --bottiglia: rgb(19, 91, 113);
+}
 body {
-    background-color: burlywood;
     padding: 20px;
+    font-family: 'Lexend', sans-serif;
+}
+.titoli {
+    color: var(--bottiglia);
+    font-weight: 900;
+}
+input {
+    border: 2px solid rgb(33, 33, 33);
+    border-radius: 5px;
+}
+button {
+    color: var(--darkpesca);
+    background-color: var(--pesca);
+    border-radius: 5px;
+    border: 2px solid var(--darkpesca);
+    padding: 4.5px 6px;
+}
+button:hover {
+    color: var(--azzurro);
+    background-color: var(--ghiaccio);
+    border: 2px solid var(--azzurro);
+}
+h1 {font-size: 45px;}
+.vzinput, .vz-input, .vz-input-n {
+    position: relative;
+}    
+.vzinput::after, .vz-input::after, .vz-input-n::after {
+    position: absolute;
+    left: 5px;
+    top: -12px;
+    white-space: nowrap;
+    background-color: white;
+    padding: 2px;
+    font-size: 12px;
+}
+.after-parola::after {
+    content: 'La tua parola';
+}
+.after-pod::after {
+    content: 'Pari o dispari?';
+}
+.after-num::after {
+    content: 'Gioca un numero';
 }

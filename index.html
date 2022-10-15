@@ -5,30 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/libreria.js"></script>
     <title>Palindromo - Pari e Dispari</title>
 </head>
 <body>
     <!-- Palidroma -->
-    <input id="parola" type="text" placeholder="scrivi una parola">  
+    <h1 class="text-center titoli text-capitalize mb-5">w le funzioni</h1>
+    <h2 class="titoli pb-3">Scopri se la tua parola &egrave; palindroma</h2>
+    <label class="vzinput after-parola"><input id="parola" type="text" class="p-1"></label>
     <button id="btn-verifica">Verifica</button>  
-    <p></p>
+    <p class="pt-3"></p>
 
     <!-- Pari e dispari -->
-    <input id="scelta-utente" type="text" placeholder="scrivi 'pari' o 'dispari' per fare la tua scelta" class="w-50">
-    <input id="numero-utente" type="number" placeholder="scegli un numero da 1 a 5" class="w-25">
-    <button id="btn-gioca">gioca</button>
-    <br>
-    <span id="txt-num-ut"></span>
-    <br>
-    <span id="txt-num-pc"></span>
-    <br>
-    <span id="txt-somma"></span>
-    <br>
-    <span id="txt-scelta"></span>
+    <h2 class="titoli pb-3 mt-5">Sfida il computer a pari e dispari</h2>
+    <label class="vz-input after-pod w-25"><input id="scelta-utente" type="text" class="w-100 p-1"></label>
+    <label class="vz-input-n after-num w-25"><input id="numero-utente" type="number" placeholder="Da 1 a 5" class=" p-1"></label>
+    <button id="btn-gioca">Gioca</button>
+    <p id="txt-num-ut" class="pt-3"></p>
+    <p id="txt-num-pc"></p>
+    <p id="txt-somma"></p>
+    <p id="txt-scelta"></p>
     <p id="txt-risultato" class=""></p>
-
 
     <!-- js -->
     <script src="./js/script.js"></script>

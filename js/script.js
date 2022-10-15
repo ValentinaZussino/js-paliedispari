@@ -14,9 +14,9 @@ btnVerifica.addEventListener('click', function(){
     if(!isNaN(parolaValue)){
         alert('Inserisci una parola!');
     } else if(palindrome(parolaValue)){
-    document.querySelector('p').innerHTML = 'la tua parola &egrave; palindroma';
+    document.querySelector('p').innerHTML = 'La tua parola &egrave; palindroma';
     } else {
-    document.querySelector('p').innerHTML = 'la tua parola NON &egrave; palindroma';
+    document.querySelector('p').innerHTML = 'La tua parola NON &egrave; palindroma';
     }
     parolaInput.value = '';
 });
