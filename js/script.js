@@ -51,7 +51,7 @@ btnGioca.addEventListener('click', function(){
     }
     let numeroUtValue = parseInt(numeroUtInput.value);
     numeroUtInput.value = '';
-    if((numeroUtValue < 1 || numeroUtValue > 5)){
+    if(isNaN(numeroUtValue) || numeroUtValue < 1 || numeroUtValue > 5){
         alert('metti un numero da 1 a 5');
         return;
     }
